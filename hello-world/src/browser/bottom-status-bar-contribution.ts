@@ -3,7 +3,7 @@ import { FrontendApplicationContribution } from '@theia/core/lib/browser';
 import { StatusBar, StatusBarAlignment } from '@theia/core/lib/browser/status-bar';
 
 @injectable()
-export class MyStatusBarContribution implements FrontendApplicationContribution {
+export class BottomStatusBarContribution implements FrontendApplicationContribution {
 
     @inject(StatusBar)
     protected readonly statusBar: StatusBar;

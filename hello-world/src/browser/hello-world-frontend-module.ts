@@ -5,8 +5,8 @@ import { StudioCommandContribution, StudioMenuContribution } from './studio-menu
 import {  FrontendApplicationContribution, WidgetFactory } from '@theia/core/lib/browser';
 import { DetailsWidget } from './details-widget';
 import { PropertiesWidget } from './properties-widget';
-import { MyStatusBarContribution } from './status-bar';
-import { MyCommandContribution } from './my-commands';
+import { BottomStatusBarContribution } from './bottom-status-bar-contribution';
+import { PropertiesCommandContribution } from './properties-command-contribution';
 
 export default new ContainerModule(bind => {
     bind(CommandContribution).to(HelloWorldCommandContribution);
@@ -29,9 +29,9 @@ export default new ContainerModule(bind => {
         createWidget: () => ctx.container.get(PropertiesWidget)
     })).inSingletonScope();
 
-    bind(MyStatusBarContribution).toSelf().inSingletonScope();
-    bind(FrontendApplicationContribution).toService(MyStatusBarContribution);
+    bind(BottomStatusBarContribution).toSelf().inSingletonScope();
+    bind(FrontendApplicationContribution).toService(BottomStatusBarContribution);
 
-    bind(MyCommandContribution).toSelf().inSingletonScope();
-    bind(CommandContribution).toService(MyCommandContribution);   
+    bind(PropertiesCommandContribution).toSelf().inSingletonScope();
+    bind(CommandContribution).toService(PropertiesCommandContribution);   
 });

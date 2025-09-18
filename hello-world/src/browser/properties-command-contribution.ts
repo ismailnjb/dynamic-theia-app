@@ -15,7 +15,7 @@ export namespace MyCommands {
 }
 
 @injectable()
-export class MyCommandContribution implements CommandContribution {
+export class PropertiesCommandContribution implements CommandContribution {
 
     @inject(WidgetManager)
     protected readonly widgetManager: WidgetManager;
