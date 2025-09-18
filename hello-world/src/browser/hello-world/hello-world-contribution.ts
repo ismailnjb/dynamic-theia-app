@@ -22,7 +22,6 @@ export class HelloWorldCommandContribution implements CommandContribution {
 
 @injectable()
 export class HelloWorldMenuContribution implements MenuContribution {
-
     registerMenus(menus: MenuModelRegistry): void {
         menus.registerMenuAction(CommonMenus.EDIT_FIND, {
             commandId: HelloWorldCommand.id,
