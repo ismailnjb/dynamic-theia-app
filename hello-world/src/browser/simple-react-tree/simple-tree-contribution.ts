@@ -2,6 +2,7 @@
 import { injectable, inject } from '@theia/core/shared/inversify';
 import { FrontendApplicationContribution, WidgetManager, ApplicationShell } from '@theia/core/lib/browser';
 import { SimpleTreeWidget } from './simple-tree-widget';
+import { FruitsTreeWidget } from '../fruits-tree-implementation/fruits-tree-widget';
 
 @injectable()
 export class SimpleTreeContribution implements FrontendApplicationContribution {

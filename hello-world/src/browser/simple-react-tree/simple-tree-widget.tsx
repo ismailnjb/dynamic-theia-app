@@ -12,7 +12,7 @@ export interface SimpleNode {
 @injectable()
 export class SimpleTreeWidget extends ReactWidget {
     static readonly ID = "simple-tree-widget";
-    static readonly LABEL = "Simple Tree";
+    static readonly LABEL = "Simple Tree Ismail";
 
     protected data: SimpleNode[] = [
         {
